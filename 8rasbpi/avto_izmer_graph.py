@@ -28,6 +28,11 @@ props = dict(boxstyle='round', facecolor='white', alpha=0.8, edgecolor='gray', p
 ax.text(0.98, 0.15, time_info, transform=ax.transAxes,
         fontsize=11, verticalalignment='top', horizontalalignment='right',
         bbox=props)
+marker_freq = 120
+marker_color='blue'
+marker_style='o'
+marker_size=10
+ax.plot(data_time[::marker_freq], data[::marker_freq], marker=marker_style, color=marker_color, markersize=marker_size, linestyle='None')
 ax.grid(which='major', color='k')
 ax.minorticks_on()
 ax.grid(which='minor', color='blue', linestyle=':')
